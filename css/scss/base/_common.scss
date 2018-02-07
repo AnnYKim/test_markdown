@@ -13,6 +13,16 @@
     //background-color: #ffcfcf;
 }
 
+.grid {
+    width: 100%;
+    height: auto;
+    max-width: 1280px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    outline: 1px dashed pink;
+    margin: 0 auto;
+}
+
 .section {
     position: relative;
     width: 100%;
