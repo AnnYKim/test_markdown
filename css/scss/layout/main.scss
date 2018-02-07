@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+
+/*  
+*   MAIN STYLE
+*/
+
+.main {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+            
+    .main-title-sm {
+        display: block;
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: 0.26rem;
+    }
+
+    .main-title {
+        position: relative;
+        margin-top: 14px;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.38rem;
+        
+        &:after {
+            @include title-bottom;
+        }
+    }
+    
+    .main-video {
+        margin-bottom: 20vh;
+        
+        .video-01 {
+            //@include position-center;
+        }
+    }
+}

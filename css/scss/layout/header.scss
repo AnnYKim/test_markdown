@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+
+/*  
+*   HEADER STYLE
+*/
+
+.header {
+    z-index: $zindex-fixed;
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: #1472f2;
+}
