@@ -416,9 +416,10 @@ $slideList: bts, blockb, shinee, exo, superjunior, bap;
 
 
 .footer {
-    width: 100%;
+    z-index: $zindex-fixed;
     position: absolute;
     bottom: 60px;
+    width: 100%;
     box-sizing: border-box;
     
     @include pc-sm {
