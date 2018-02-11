@@ -1,23 +1,23 @@
 /*
-Error: Undefined mixin 'tablet'.
-        on line 21 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss, in `tablet'
-        from line 21 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss
+Error: Undefined mixin 'pc-sm'.
+        on line 21 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/visual.scss, in `pc-sm'
+        from line 21 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/visual.scss
 
-16:     flex-direction: column;
-17:     justify-content: center;
-18:     text-align: center;
-19:     box-sizing: border-box;
-20:     
-21:     @include tablet {
-22:         padding-bottom: 20vh;
-23:     }
-24:             
-25:     .main-title-sm { //메인 서브 타이틀
-26:         display: block;
+16:     -khtml-user-select: none;
+17:     -moz-user-select: none;
+18:     -o-user-select: none;
+19:     user-select: none;
+20: 
+21:     @include pc-sm {
+22:         display: none; //pc-sm 부터 숨김
+23:     } 
+24: 
+25:     .numList {
+26:         display: -webkit-flex;
 
 Backtrace:
-C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss:21:in `tablet'
-C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss:21
+C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/visual.scss:21:in `pc-sm'
+C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/visual.scss:21
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
@@ -72,4 +72,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'tablet'.\A         on line 21 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss, in `tablet'\A         from line 21 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss\A \A 16:     flex-direction: column;\A 17:     justify-content: center;\A 18:     text-align: center;\A 19:     box-sizing: border-box;\A 20:     \A 21:     @include tablet {\A 22:         padding-bottom: 20vh;\A 23:     }\A 24:             \A 25:     .main-title-sm { //메인 서브 타이틀\A 26:         display: block;"; }
+  content: "Error: Undefined mixin 'pc-sm'.\A         on line 21 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/visual.scss, in `pc-sm'\A         from line 21 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/visual.scss\A \A 16:     -khtml-user-select: none;\A 17:     -moz-user-select: none;\A 18:     -o-user-select: none;\A 19:     user-select: none;\A 20: \A 21:     @include pc-sm {\A 22:         display: none; //pc-sm 부터 숨김\A 23:     } \A 24: \A 25:     .numList {\A 26:         display: -webkit-flex;"; }

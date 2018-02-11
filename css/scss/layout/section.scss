@@ -5,6 +5,8 @@
 *   SECTION STYLE
 */
 
+
+
 .page-main {
     display: -webkit-flex;
     display: -moz-flex;
@@ -15,11 +17,12 @@
     justify-content: center;
     text-align: center;
     box-sizing: border-box;
+    
     @include tablet {
         padding-bottom: 20vh;
     }
             
-    .main-title-sm {
+    .main-title-sm { //메인 서브 타이틀
         display: block;
         margin-bottom: 0;
         color: $color-gray;
@@ -44,7 +47,7 @@
         }
     }
 
-    .main-title {
+    .main-title { //메인 타이틀
         position: relative;
         margin-top: 14px;
         font-size: 18px;
@@ -75,22 +78,22 @@
         }
     }
     
-    .main-video {
+    .main-video { //메인 비디오 영역
         z-index: $zindex-important;
         position: relative;
         margin-bottom: 20vh;
+        
         @include tablet {
             margin-bottom: 28px;
         }
         
         .visual-video {
-            
             @include tablet {
                 display: none;
             }
         }
         
-        .visual-image {
+        .visual-image { //태블릿 이하 이미지로 대체
             display: none;
             
             @include tablet {
@@ -109,13 +112,28 @@
     
 }
 
-
-
-//end of .main
-
+//end of .page-main
 
 
 
+.section.greeting {
+    
+    background-position: 50%;
+    background-image: url(#{$path-image}bg_greeting.png);
+    background-repeat: no-repeat;
+    
+    @include pc-sm {
+        background-size: contain;
+    }
+    @include tablet {
+        padding-bottom: 12vh;
+        padding-top: 6vh;
+        background-position: 10vw 0;
+    }
+    
+    
+}
+//end of .section.gretting
 
 .page-greeting {
     display: -webkit-flex;
@@ -126,19 +144,6 @@
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
-    background-position: 50%;
-    background-image: url(#{$path-image}bg_greeting.png);
-    background-repeat: no-repeat;
-    
-    @include pc-sm {
-        background-size: contain;
-    }
-    
-    @include tablet {
-        background-position: 10vw -10vw;
-        padding-bottom: 12vh;
-    }
-    
     
     .greeting-inner {
         width: 60%;
@@ -216,6 +221,9 @@
     }
 }
 
+//end of .page-greeting
+
+
 
 .page-slider {
     position: relative;
@@ -234,11 +242,15 @@
         padding-bottom: 20vh;
     }
 }
-    
+//end of .page-slider
+
+
+
+// 슬라이더    
 $slideList: bts, blockb, shinee, exo, superjunior, bap;
 
+
 .sliderArea {
-    //display: inline-block;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -278,12 +290,19 @@ $slideList: bts, blockb, shinee, exo, superjunior, bap;
     }
     
     .swiper-slide {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
         position: relative;
         width: 100%;
         height: 100%;
+        text-align: center;
         background-size: 100%;
-        flex-direction: column;
-        justify-content: flex-end;
         background-repeat: no-repeat;
         background-size: 100% 100%;
         
@@ -307,7 +326,7 @@ $slideList: bts, blockb, shinee, exo, superjunior, bap;
         }
     }
     
-    .swiper-temp {
+    .swiper-temp { //태블릿에서만 보임
         position: relative;
         display: none;
         background-color: rgba(26, 26, 26, 0.63);
@@ -323,7 +342,7 @@ $slideList: bts, blockb, shinee, exo, superjunior, bap;
         }
     }
 
-    @each $value in $slideList {
+    @each $value in $slideList { //각 슬라이더에게 클래스에게 맞게 배경이미지 삽입
         .slide-#{$value} {
             background-image: url(#{$path-image}img_#{$value}.png);
         }
@@ -332,7 +351,7 @@ $slideList: bts, blockb, shinee, exo, superjunior, bap;
     
 }
 
-.slideArea-mo {
+.slideArea-mo { //모바일에서만 보이는 리스트
     display: none;
     width: 100%;
     
@@ -525,52 +544,3 @@ $slideList: bts, blockb, shinee, exo, superjunior, bap;
 
 }
 
-
-
-    
-    .visual-effect {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-        
-        @include pc-sm {
-            display: none;
-        }
-        
-        .numList {
-            display: -webkit-flex;
-            display: -moz-flex;
-            display: -ms-flex;
-            display: -o-flex;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            width: 90%;
-            height: 65%;
-            margin: 0 auto;
-            padding-top: 5%;
-            box-sizing: border-box;
-            outline: 1px solid red;
-
-            
-            
-            div {
-                flex-basis: 14%;
-                flex-grow: 1;
-            }
-        }
-    }
-
-.page-slider .visual-effect {
-    .numList {
-        padding-top: 10%;
-    }
-}

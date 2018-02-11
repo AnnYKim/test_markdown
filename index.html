@@ -12,209 +12,25 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#111">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no" />
   
-    <meta name="description" content="Markdown" />
-    <meta name="keywords" content="Markdown" />
-    <meta name="title" content="Markdown" />
-    <meta name="author" content="Markdown" />
-    <meta property="og:title" content="Markdown" />
-    <meta property="og:description" content="Markdown" />
+    <meta name="description" content="MyMusicTaste" />
+    <meta name="keywords" content="MyMusicTaste" />
+    <meta name="title" content="MyMusicTaste" />
+    <meta name="author" content="MyMusicTaste" />
+    <meta property="og:title" content="MyMusicTaste" />
+    <meta property="og:description" content="MyMusicTaste" />
     <meta property="og:image" content="images/og.png" />
     
     <link rel="stylesheet" href="css/style.css" />
-	<link rel="shortcut icon" href="images/favicon.ico" /> 
-    
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="js/jquery.fullpage.min.js"></script>
-    <script src="js/swiper.min.js"></script> <!--삭제 예정-->
-    
-<!--    <script>
-        if (screen && screen.width > 768) {
-        document.write('<script type="text/javascript" src="js/jquery.fullpage.min.js"><\/script>');
-        }
-</script>
-    -->
-    <style>
-        
-    
-        .swiper-slide {
-            
-      text-align: center;
-      font-size: 18px;
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
-    
-    </style>
-    
-    <script>
-        $(function(){
-            
-            
-               $('#fullpage').fullpage({
-		          autoScrolling: true,
-		          fadingEffect: false,
-                responsiveWidth: 769,
-               });
-            
-            
-            var swiper01 = new Swiper('.swiper-01', {
-                direction: 'vertical',
-                //simulateTouch:false,
-                speed: 1800,
-                slidesPerView: 1,
-                centeredSlides: true,
-                loop: true,
-                grabCursor: true,
-                autoplay: {
-                    delay: 3500,
-                    disableOnInteraction:true,
-                },
-            });
-            
-            var swiper02 = new Swiper('.swiper-02', {
-                direction: 'vertical',
-                speed: 1800,
-                slidesPerView: 1,
-                centeredSlides: true,
-                loop: true,
-                grabCursor: true,
-                autoplay: {
-                    delay: 2000,
-                    disableOnInteraction:true,
-                },
-            });
-            
-            var swiper03 = new Swiper('.swiper-03', {
-                direction: 'vertical',
-                speed: 1800,
-                slidesPerView: 1,
-                centeredSlides: true,
-                loop: true,
-                grabCursor: true,
-                autoplay: {
-                    delay: 4400,
-                    disableOnInteraction:true,
-                },
-            });
-            
-            $(".swiper-container").on("mouseenter",function(){
-                var index = $(".swiper-container").index($(this));
-                switch (index) {
-                    case 0:
-                        swiper01.autoplay.stop();
-                        break;
-                    case 1:
-                        swiper02.autoplay.stop();
-                        break;
-                    case 2:
-                        swiper03.autoplay.stop();
-                        break;
-                 }
-                
-            });
-            $(".swiper-container").on("mouseleave",function(){
-                var index = $(".swiper-container").index($(this));
-                switch (index) {
-                    case 0:
-                        swiper01.autoplay.start();
-                        break;
-                    case 1:
-                        swiper02.autoplay.start();
-                        break;
-                    case 2:
-                        swiper03.autoplay.start();
-                        break;
-                 }
-            });
-            
-            function randomDelay(){
-                
-                var generateRandom = function (min, max) {
-                  var randomNumber = ( Math.floor(Math.random()*(max-min+1)) + min ) *1000;
-                  return randomNumber;
-                }
-
-                swiper01.params.autoplay.delay = generateRandom(1,5);
-                swiper02.params.autoplay.delay = generateRandom(3,6);
-                swiper03.params.autoplay.delay = generateRandom(2,7);
-            }
-            
-            
-            setInterval(randomDelay, 1000);
-            
-            
-            
-            
-            
-                
-    function isSmallScreen(){
-      
-       if ($(window).width() < 769) {
-         $("body").addClass('screen-small');
-       }else{
-         $("body").removeClass('screen-small');
-       }
-    }
-            
-            
-            
-          function goToTop(){
-            $("html,body").stop().animate({
-                scrollTop: 0
-             },800);
-            
-          }
-            
-            $(".btn-toTop").on("click",function(){
-                
-                goToTop();
-            });
-            
-            
-            
-            var visualNumList = [];
-            
-            function generateRandomVisualNum(){
-                    var visualNum = Math.floor(Math.random()*13);
-                    if(visualNum>=10){visualNum = ''};
-                    return visualNum;
-            }
-            
-            function inserVisualNum(){
-            
-            $("div.numList > div").each(function(){
-                $(this).text(generateRandomVisualNum());
-            });
-                
-            }
-            
-            setInterval(inserVisualNum,300);
-            
-            
-        });
-    </script>
-      <script>
-  </script>
-    
+	<link rel="shortcut icon" href="favicon.ico" /> 
     
   
-    <title>★마크다운!</title>
+    <title>MyMusicTaste</title>
+    
 </head>
 <body>
     <div class="wrap">
         <header class="header">
-            <h1 class="display-none">Just, Markdown!</h1>
+            <h1 class="display-none">MyMusicTaste</h1>
             <strong class="header-title">SHARE ON</strong>
             <ul class="share">
                 <li class="share-fb"><a href="#">Facebook</a></li>
@@ -244,44 +60,14 @@
                     
 
                     <div class="visual-effect">
-                       <button class="test">버튼</button>
-                        <div class="numList">
-                            <div>1</div>
-                            <div>2</div>
-                            <div>3</div>
-                            <div>4</div>
-                            <div>5</div>
-                            <div>6</div>
-                            <div>7</div>
-                            <div>8</div>
-                            <div>9</div>
-                            <div>10</div>
-                            <div>11</div>
-                            <div>12</div>
-                            <div>13</div>
-                            <div>14</div>
-                            <div>15</div>
-                            <div>16</div>
-                            <div>17</div>
-                            <div>18</div>
-                            <div>19</div>
-                            <div>20</div>
-                            <div>21</div>
-                            <div>22</div>
-                            <div>23</div>
-                            <div>24</div>
-                            <div>25</div>
-                            <div>26</div>
-                            <div>27</div>
-                            <div>28</div>
-                        </div>
+                        <div class="numList"></div>
                     </div>
 
                 </div>
                 
             </section>
             
-            <section class="section">
+            <section class="section greeting">
                 <div class="page-greeting grid">
                     <div class="greeting-inner">
                         <h2 class="greeting-title">
@@ -388,40 +174,6 @@
                     </ul>
                     
                     
-                    <div class="visual-effect">
-                        <div class="numList">
-                            <div>1</div>
-                            <div>2</div>
-                            <div>3</div>
-                            <div>4</div>
-                            <div>5</div>
-                            <div>6</div>
-                            <div>7</div>
-                            <div>8</div>
-                            <div>9</div>
-                            <div>10</div>
-                            <div>11</div>
-                            <div>12</div>
-                            <div>13</div>
-                            <div>14</div>
-                            <div>15</div>
-                            <div>16</div>
-                            <div>17</div>
-                            <div>18</div>
-                            <div>19</div>
-                            <div>20</div>
-                            <div>21</div>
-                            <div>22</div>
-                            <div>23</div>
-                            <div>24</div>
-                            <div>25</div>
-                            <div>26</div>
-                            <div>27</div>
-                            <div>28</div>
-                        </div>
-                    </div>
-                    
-                    
                     <div class="footer">
                         <strong class="footer-title">FOLLOW US ON</strong>
                         <ul class="footer-sns">
@@ -434,8 +186,105 @@
                     </div>
                     
                 </div>
+                    
+                    <div class="visual-effect">
+                        <div class="numList numList-in-slider">
+                        </div>
+                    </div>
+                    
             </section>
         </div>
     </div>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/jquery.fullpage.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/script.js"></script>
+    
+    
+    <script>
+        $(function(){
+            
+                $('#fullpage').fullpage({
+                   autoScrolling: true,
+                    fadingEffect: false,
+                    responsiveWidth: 769,
+               });
+
+                var swiper01 = new Swiper('.swiper-01', {
+                direction: 'vertical',
+                //simulateTouch:false,
+                speed: 1800,
+                slidesPerView: 1,
+                centeredSlides: true,
+                loop: true,
+                grabCursor: true,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction:true,
+                },
+                });
+
+                var swiper02 = new Swiper('.swiper-02', {
+                    direction: 'vertical',
+                    speed: 1800,
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                    loop: true,
+                    grabCursor: true,
+                    autoplay: {
+                        delay: 2000,
+                        disableOnInteraction:true,
+                    },
+                });
+
+                var swiper03 = new Swiper('.swiper-03', {
+                    direction: 'vertical',
+                    speed: 1800,
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                    loop: true,
+                    grabCursor: true,
+                    autoplay: {
+                        delay: 4400,
+                        disableOnInteraction:true,
+                    },
+                });
+
+
+                $(".swiper-container").on("mouseenter",function(){
+                    var index = $(".swiper-container").index($(this));
+                    switch (index) {
+                        case 0:
+                            swiper01.autoplay.stop();
+                            break;
+                        case 1:
+                            swiper02.autoplay.stop();
+                            break;
+                        case 2:
+                            swiper03.autoplay.stop();
+                            break;
+                     }
+
+                });
+                
+                $(".swiper-container").on("mouseleave",function(){
+                    var index = $(".swiper-container").index($(this));
+                    switch (index) {
+                        case 0:
+                            swiper01.autoplay.start();
+                            break;
+                        case 1:
+                            swiper02.autoplay.start();
+                            break;
+                        case 2:
+                            swiper03.autoplay.start();
+                            break;
+                     }
+                });
+            
+        });
+    </script>
+    
 </body>
 </html>
