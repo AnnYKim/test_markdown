@@ -10,9 +10,9 @@ Error: Undefined variable: "$zindex-fixed".
 9:     z-index: $zindex-fixed;
 10:     position: fixed;
 11:     top: 50%;
-12:     left: 10px;
-13:     transform: translateY(-50%);
-14:     background-color: #1472f2;
+12:     left: 30px;
+13:     width: 60px;
+14:     font-size: 14px;
 
 Backtrace:
 C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/header.scss:9
@@ -68,4 +68,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$zindex-fixed\".\A         on line 9 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/header.scss\A \A 4: /*  \A 5: *   HEADER STYLE\A 6: */\A 7: \A 8: .header {\A 9:     z-index: $zindex-fixed;\A 10:     position: fixed;\A 11:     top: 50%;\A 12:     left: 10px;\A 13:     transform: translateY(-50%);\A 14:     background-color: #1472f2;"; }
+  content: "Error: Undefined variable: \"$zindex-fixed\".\A         on line 9 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/header.scss\A \A 4: /*  \A 5: *   HEADER STYLE\A 6: */\A 7: \A 8: .header {\A 9:     z-index: $zindex-fixed;\A 10:     position: fixed;\A 11:     top: 50%;\A 12:     left: 30px;\A 13:     width: 60px;\A 14:     font-size: 14px;"; }

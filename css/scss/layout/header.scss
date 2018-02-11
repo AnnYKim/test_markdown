@@ -9,7 +9,68 @@
     z-index: $zindex-fixed;
     position: fixed;
     top: 50%;
-    left: 10px;
+    left: 30px;
+    width: 60px;
+    font-size: 14px;
+    text-align: center;
     transform: translateY(-50%);
-    background-color: #1472f2;
+    
+    @include pc-sm {
+        font-size: 13px;
+        width: 40px;
+        left: 25px;
+    }
+    
+    @include tablet {
+        position: absolute;
+        display: none;
+    }
+    
+    .share {
+        
+        margin-top: 18px;
+        
+        li {
+            display: inline-block;
+            overflow: hidden;
+            width: 42px;
+            height: 42px;
+            margin-top: 14px;
+            text-indent: -999px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            @include trans(background-image);
+            
+            @include pc-sm {
+                width: 36px;
+                height: 36px;
+            }
+            
+            &:first-child {
+                margin-top: 0;
+            }
+            
+            &:hover {
+                @include trans(background-image);
+            }
+            
+            & > a {
+                @include block-anchor;
+            }
+        }
+        
+        $shareList: fb, tw; //페이스북, 트위터
+
+        @each $value in $shareList {
+            .share-#{$value} {
+                background-image: url(#{$path-image}ico_share_#{$value}.png);
+                
+                &:hover {
+                    background-image: url(#{$path-image}ico_#{$value}.png);
+                }
+            }
+        }
+        
+        
+    }
 }

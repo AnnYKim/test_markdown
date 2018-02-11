@@ -11,13 +11,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
 // 변수, 믹스인, 미디어쿼리
+@import "helpers/mediaQueries";
 @import "helpers/variables";
 @import "helpers/mixins";
-@import "helpers/mediaQueries";
 
 // 기본 스타일
 @import "base/reset";
 @import "base/common";
+
+// 벤더
+@import "vendor/swiper.scss";
 
 // 레이아웃 
 @import "layout/header";

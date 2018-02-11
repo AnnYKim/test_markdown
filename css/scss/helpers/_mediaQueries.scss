@@ -1,50 +1,24 @@
 @charset "utf-8";
 
 
-// **** Media Queries **** //
-
-
-// Break Point (Desktop First)
-$desktop-l-width	: 1920px;
-$desktop-m-width	: 1600px;
-$desktop-s-width	: 1200px;
-$tablet-l-width		: 1024px;
-$tablet-s-width		: 768px;
-$mob-l-width		: 640px;
-$mob-m-width		: 425px;
-$mob-s-width		: 375px;
-$mob-ip5-width		: 320px;
+// Break Point 
+$desktop-md-width	: 1280px;
+$tablet-lg-width		: 980px;
+$tablet-width		: 768px;
+$mobile-width		: 425px;
  
-
-// ! 사용법 !
-//
-//   @include pc-lg {
-//	  h1 {
-//	 	color: red;
-//    }
-//   }
-//
-
 // ----------------------- * -----------------------
 
-
-// PC large (1921px~)
-@mixin pc-lg {
-	@media screen and (min-width: #{$desktop-l-width + 1}) {
-		@content;
-	}
-}
-
-// PC middle (1601px~1920px)
+// PC (md)
 @mixin pc-md {
-	@media screen and (min-width: #{$desktop-m-width + 1}) {
+	@media screen and (min-width: #{$desktop-md-width}) {
 		@content;
 	}
 }
  
-// PC small (1201px~1600px)
+// PC (sm)
 @mixin pc-sm {
-	@media screen and (min-width: #{$desktop-s-width + 1}) and (max-width: #{$desktop-m-width}) {
+	@media screen and (max-width: #{$desktop-md-width - 1}) {
 		@content;
 	}
 }
@@ -53,9 +27,14 @@ $mob-ip5-width		: 320px;
 // ----------------------- * -----------------------
 
   
-// Tablet (641px~1200px)
+// Tablet
+@mixin tablet-lg {
+	@media screen and (max-width: #{$tablet-lg-width}) {
+		@content;
+	}
+}
 @mixin tablet {
-	@media screen and (min-width: #{$mob-l-width + 1}) and (max-width: #{$desktop-s-width}) {
+	@media screen and (max-width: #{$tablet-width}) {
 		@content;
 	}
 }
@@ -63,25 +42,9 @@ $mob-ip5-width		: 320px;
 // ----------------------- * -----------------------
 
 
-// Mobile large (~640px)
-@mixin mo-lg {
-	@media screen and (max-width: #{$mob-l-width}) {
+// Mobile 
+@mixin mobile {
+	@media screen and (max-width: #{$mobile-width}) {
 		@content;
 	}
 }
-
-// Mobile small (~375px)
-@mixin mo-sm {
-	@media screen and (max-width: #{$mob-s-width}) {
-		@content;
-	}
-}
-// Mobile iphon5 (~320px)
-@mixin mo-ip5 {
-	@media screen and (max-width: #{$mob-ip5-width}) {
-		@content;
-	}
-}
-
-// ----------------------- * -----------------------
-

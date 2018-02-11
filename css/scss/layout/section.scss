@@ -5,7 +5,7 @@
 *   SECTION STYLE
 */
 
-.main {
+.page-main {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -15,6 +15,9 @@
     justify-content: center;
     text-align: center;
     box-sizing: border-box;
+    @include tablet {
+        padding-bottom: 20vh;
+    }
             
     .main-title-sm {
         display: block;
@@ -22,7 +25,23 @@
         color: $color-gray;
         font-size: 15px;
         font-weight: 400;
-        letter-spacing: 0.26rem;
+        letter-spacing: 0.26rem;    
+        
+        @include pc-sm {
+            font-size: 14px;
+        }
+        @include tablet {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            width: 100%;
+            font-size: 15px;
+            letter-spacing: 0.2rem; 
+            transform: translateX(-50%);
+        }
+        @include mobile {
+            letter-spacing: 0.16rem; 
+        }
     }
 
     .main-title {
@@ -31,6 +50,17 @@
         font-size: 18px;
         font-weight: 600;
         letter-spacing: 0.38rem;
+        
+        @include pc-sm {
+            font-size: 17px;
+        }
+        @include tablet {
+            font-size: 22px;
+            letter-spacing: 0.15rem;
+        }
+        @include mobile {
+            font-size: 21px;
+        }
         
         &:after {
                 display: block;
@@ -46,20 +76,48 @@
     }
     
     .main-video {
+        z-index: $zindex-important;
+        position: relative;
         margin-bottom: 20vh;
+        @include tablet {
+            margin-bottom: 28px;
+        }
         
-        .video-01 {
-            //@include position-center;
+        .visual-video {
+            
+            @include tablet {
+                display: none;
+            }
+        }
+        
+        .visual-image {
+            display: none;
+            
+            @include tablet {
+                display: block;
+                width: 100%;
+                height: 0;
+                padding-top: 50%;
+                margin-top: 140px;
+                background-size: 70%;
+                background-image: url(#{$path-image}bg_intro_m.gif);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
         }
     }
+    
 }
+
+
+
 //end of .main
 
 
 
 
 
-.greeting {
+.page-greeting {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -72,15 +130,46 @@
     background-image: url(#{$path-image}bg_greeting.png);
     background-repeat: no-repeat;
     
+    @include pc-sm {
+        background-size: contain;
+    }
+    
+    @include tablet {
+        background-position: 10vw -10vw;
+        padding-bottom: 12vh;
+    }
+    
+    
     .greeting-inner {
         width: 60%;
         max-width: 620px;
+        
+        @include pc-sm {
+            width: 80%;
+            max-width: 100%;
+        }
+        
+        @include tablet {
+            width: 100%;
+            max-width: 100%;
+        }
     }
     
     .greeting-title {
         position: relative;
         font-size: 25px;
         letter-spacing: 0.3rem;
+        
+        @include pc-sm {
+            font-size: 22px;
+        }
+        @include tablet {
+            font-weight: 400;
+            letter-spacing: 0.18rem;
+        }
+        @include mobile {
+            letter-spacing: 0.1rem;
+        }
         
         &:after {
             display: block;
@@ -91,23 +180,397 @@
             height: 3px;
             background-color: #fff;
             content: '';
+            
+            @include tablet {
+                width: 60px;
+            }
+            @include mobile {
+                width: 44px;
+            }
         }
+        
     }
     
     
     .greeting-text {
         margin-top: 64px;
         @include font-sub;
-        font-size: 16px;
         
         p {
             margin-top: 26px;
+            font-size: 16px;
             line-height: 1.9;
             color: $color-gray;
+        
+            @include tablet {
+                line-height: 1.6;
+            }
+            @include mobile {
+                line-height: 1.4;
+            }
                 
             &:first-child {
                 margin-top: 0;
             }
         }
+    }
+}
+
+
+.page-slider {
+    position: relative;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100% !important;
+    
+    @include tablet {
+        padding-bottom: 20vh;
+    }
+}
+    
+$slideList: bts, blockb, shinee, exo, superjunior, bap;
+
+.sliderArea {
+    //display: inline-block;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin-bottom: 20vh;
+    
+    @include pc-sm {
+        width: 67%;
+        flex-wrap: wrap;
+        margin-bottom: 10vh;
+    }
+    
+    @include tablet {
+        display: none;
+    }
+    
+    &:after {
+        display: block;
+        clear: both;
+        content: '';
+    }
+    
+    .swiper-container {
+        //float: left;
+        width: 360px !important;
+        height: 320px !important;
+        
+        @include pc-sm {
+            width: 50% !important;
+            height: 22vw !important;
+        }
+    }
+    
+    .swiper-wrapper {
+        transition-timing-function: cubic-bezier(.79, .17, .66, .94);
+    }
+    
+    .swiper-slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        
+        .btn-make {
+            position: absolute;
+            bottom: 0;
+            opacity: .8;
+            display: block;
+            padding: 8px 36px;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.2rem;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            @include trans(opacity);
+            
+            &:hover {
+                opacity: 1;
+                @include trans(opacity);
+            }
+        }
+    }
+    
+    .swiper-temp {
+        position: relative;
+        display: none;
+        background-color: rgba(26, 26, 26, 0.63);
+        p {
+            @include position-center;
+            opacity: .3;
+            padding-bottom: 8px;
+            font-size: 28px;
+        }
+        
+        @include pc-sm {
+            display: block;
+        }
+    }
+
+    @each $value in $slideList {
+        .slide-#{$value} {
+            background-image: url(#{$path-image}img_#{$value}.png);
+        }
+    }
+        
+    
+}
+
+.slideArea-mo {
+    display: none;
+    width: 100%;
+    
+    @include tablet {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    li {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        margin-top: 10px;
+        padding-top: 30%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        
+        &:first-child {
+            margin-top: 0;
+        }
+        
+        .btn-make {
+            position: absolute;
+            right: 6px;
+            bottom: 6px;
+            opacity: .8;
+            display: block;
+            padding: 6px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.2rem;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            @include trans(opacity);
+            
+            @include mobile {
+                padding: 6px 22px;
+                font-size: 15px;
+            }
+            
+            &:hover {
+                opacity: 1;
+                @include trans(opacity);
+            }
+            
+        }
+    }
+    
+    @each $value in $slideList {
+        .slide-mo-#{$value} {
+            background-image: url(#{$path-image}img_#{$value}_m.png);
+        }
+    }
+    
+}
+
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 60px;
+    box-sizing: border-box;
+    
+    @include pc-sm {
+        bottom: 40px;
+    }
+    @include tablet {
+        padding-left: 50px;
+    }
+    @include mobile {
+        padding-left: 30px;
+    }
+    
+    .footer-title {
+        display: block;
+        color: $color-gray;
+        font-size: 19px;
+        font-weight: 400;
+        letter-spacing: 0.18rem;
+        text-align: center;
+        
+        @include pc-sm {
+            font-size: 17px;
+        }
+        @include tablet {
+            text-align: left;
+            letter-spacing: 0.05rem;
+        }
+    }
+
+    
+    .footer-sns {
+        margin-top: 16px;
+        text-align: center;
+        @include pc-sm {
+            margin-top: 10px;
+        }
+        @include tablet {
+            margin-top: 12px;
+            text-align: left;
+        }
+        
+        li {
+            opacity: .8;
+            display: inline-block;
+            overflow: hidden;
+            width: 37px;
+            height: 37px;
+            margin-left: 8px;
+            margin-right: 0;
+            text-indent: -999px;
+            vertical-align:bottom;
+            background-image: url(#{$path-image}ico_sns.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            @include trans(opacity);
+            
+            @include pc-sm {
+                width: 34px;
+                height: 34px;
+            }
+
+            @include tablet {
+                width: 30px;
+                height: 30px;
+            }
+            @include mobile {
+                width: 28px;
+                height: 28px;
+                margin-left: 6px;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:hover {    
+                opacity: 1;
+                @include trans(opacity);
+            }
+
+            & > a {
+                @include block-anchor;
+            }
+
+        }
+
+        $bg-position: (
+            'fb': 0 0, //페이스북
+            'tw': 0 33.333333%, //트위터
+            'insta': 0 66.666667%, //인스타그램
+            'yt': 0 100% //유튜브
+        );
+
+
+        @each $map, $value in $bg-position {
+            .sns-#{$map} {
+                background-position: $value;
+            }
+        }
+    }
+    
+    .btn-toTop {
+        overflow: hidden;
+        display: none;
+        position: absolute;
+        right: 50px;
+        bottom: 0px;
+        width: 40px;
+        height: 40px;
+        text-indent: -999px;
+        background-image: url(#{$path-image}ico_share.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        
+        @include tablet {
+            display: block;
+        }
+        @include mobile {
+            right: 40px;
+        }
+    }
+
+
+}
+
+
+
+    
+    .visual-effect {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        
+        @include pc-sm {
+            display: none;
+        }
+        
+        .numList {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            height: 65%;
+            margin: 0 auto;
+            padding-top: 5%;
+            box-sizing: border-box;
+            outline: 1px solid red;
+
+            
+            
+            div {
+                flex-basis: 14%;
+                flex-grow: 1;
+            }
+        }
+    }
+
+.page-slider .visual-effect {
+    .numList {
+        padding-top: 10%;
     }
 }

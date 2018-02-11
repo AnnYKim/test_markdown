@@ -1,35 +1,28 @@
 /*
-Error: Undefined variable: "$color-gray".
-        on line 22 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss
+Error: Undefined mixin 'tablet'.
+        on line 18 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss, in `tablet'
+        from line 18 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss
 
+13:     display: flex;
+14:     flex-direction: column;
+15:     justify-content: center;
+16:     text-align: center;
 17:     box-sizing: border-box;
-18:             
-19:     .main-title-sm {
-20:         display: block;
-21:         margin-bottom: 0;
-22:         color: $color-gray;
-23:         font-size: 15px;
-24:         font-weight: 400;
-25:         letter-spacing: 0.26rem;
-26:     }
-27: 
+18:     @include tablet {
+19:         padding-bottom: 20vh;
+20:     }
+21:             
+22:     .main-title-sm {
+23:         display: block;
 
 Backtrace:
-C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss:22
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/script/tree/variable.rb:49:in `_perform'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/script/tree/node.rb:58:in `perform'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
+C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss:18:in `tablet'
+C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss:18
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `map'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:98:in `with_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/stack.rb:79:in `block in with_base'
@@ -79,4 +72,4 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-gray\".\A         on line 22 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss\A \A 17:     box-sizing: border-box;\A 18:             \A 19:     .main-title-sm {\A 20:         display: block;\A 21:         margin-bottom: 0;\A 22:         color: $color-gray;\A 23:         font-size: 15px;\A 24:         font-weight: 400;\A 25:         letter-spacing: 0.26rem;\A 26:     }\A 27: "; }
+  content: "Error: Undefined mixin 'tablet'.\A         on line 18 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss, in `tablet'\A         from line 18 of C:/0_my_works_0/6_myWorkSpace/test_markdown/css/scss/layout/section.scss\A \A 13:     display: flex;\A 14:     flex-direction: column;\A 15:     justify-content: center;\A 16:     text-align: center;\A 17:     box-sizing: border-box;\A 18:     @include tablet {\A 19:         padding-bottom: 20vh;\A 20:     }\A 21:             \A 22:     .main-title-sm {\A 23:         display: block;"; }
